@@ -26,6 +26,7 @@ Implementation Steps:
    API GW - Method Request :URL query string parameters - Add input parameter(prompt which goes as input to Lambda), Enable - Request Validation(ensures prompt is passed)
             Integration Request: Content type: application/json , Template body : {"prompt":"$input.params('prompt')"} -> Prompt that we get is passed as input parameter (Velocity Template Language)
    Deploy to a Stage
+   Test it from API GW
 7. Test using Postman tool
 
 
