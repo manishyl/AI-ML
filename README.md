@@ -22,7 +22,11 @@ Implementation Steps:
    Send the URL as a response to AWS API Gateway
    Note: Provide access to Lambda role to access Bedrock and S3
 5. Create a REST API using API GW to allow user to pass the 'prompt' and view image using Pre-signed URL.
-6. Test using Postman tool
+   Create Resource and Method(GET) and integrate with Lambda function
+   API GW - Method Request :URL query string parameters - Add input parameter(prompt which goes as input to Lambda), Enable - Request Validation(ensures prompt is passed)
+            Integration Request: Content type: application/json , Template body : {"prompt":"$input.params('prompt')"} -> Prompt that we get is passed as input parameter (Velocity Template Language)
+   Deploy to a Stage
+7. Test using Postman tool
 
 
 References
