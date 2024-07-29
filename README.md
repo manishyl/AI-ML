@@ -23,3 +23,8 @@ Implementation Steps:
    Note: Provide access to Lambda role to access Bedrock
 5. Create a REST API using API GW to allow user to pass the 'prompt' and view image using Pre-signed URL.
 6. Test using Postman tool
+
+
+References
+
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime/client/invoke_model.html
