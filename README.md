@@ -20,7 +20,7 @@ Implementation Steps:
    Store the image as an Object in the S3 bucket
    Generate a Pre-Signed URL for image generated
    Send the URL as a response to AWS API Gateway
-   Note: Provide access to Lambda role to access Bedrock
+   Note: Provide access to Lambda role to access Bedrock and S3
 5. Create a REST API using API GW to allow user to pass the 'prompt' and view image using Pre-signed URL.
 6. Test using Postman tool
 
