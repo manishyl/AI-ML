@@ -15,7 +15,11 @@ def lambda_handler(event, context):
 #4. Create a Request Syntax to access the Bedrock Service 
     response_bedrock = client_bedrock.invoke_model(contentType='application/json', accept='application/json',modelId='stability.stable-diffusion-xl-v0',
        body=json.dumps({"text_prompts": [{"text": input_prompt}],"cfg_scale": 10,"steps": 30,"seed": 0}))
-    #print(response_bedrock)   
+    #print(response_bedrock) 
+     #cfg_scale - how much final image portrays the prompt , lower number to increase randomness
+     #steps - how many times the image is sampled , more steps result in a more accurate image
+     #seed - Set random number, use same seed and same setting to allow inference to create a similar image
+     
        
 #5. 5a. Retrieve from Dictionary, 5b. Convert Streaming Body to Byte using json load 5c. Print
 
