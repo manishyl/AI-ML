@@ -26,6 +26,7 @@ def lambda_handler(event, context):
 
     response_bedrock_byte=json.loads(response_bedrock['body'].read())
     #{'body': StreamingBody(),'contentType': 'string'}
+    # json.load(file) : Reads JSON data from the specified file object and converts it into a Python object (dictionary or list)
 
     print(response_bedrock_byte)
 
