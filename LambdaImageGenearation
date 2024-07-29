@@ -19,6 +19,7 @@ def lambda_handler(event, context):
      #cfg_scale(prompt stength) - how much final image portrays the prompt , lower number to increase randomness
      #steps(Generation Steps) - how many times the image is sampled , more steps result in a more accurate image
      #seed(seed) - Set random number, use same seed and same setting to allow inference to create a similar image
+     #json.dumps to convert to JSON format
      
        
 #5. 5a. Retrieve from Dictionary, 5b. Convert Streaming Body to Byte using json load 5c. Print
