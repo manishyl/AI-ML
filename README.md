@@ -14,4 +14,11 @@ Flow:
 Implementation Steps:
 
 1. Request access to models
-2. 
+2. Create S3 bucket
+3. Create Lambda Function to:
+   Connect to AWS Bedrock
+   Store the image as an Object in the S3 bucket
+   Generate a Pre-Signed URL for image generated
+   Send the URL as a response to AWS API Gateway
+4. Create a REST API using API GW to allow user to pass the 'prompt' and view image using Pre-signed URL.
+5. Test using Postman tool
